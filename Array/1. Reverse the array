@@ -1,0 +1,26 @@
+def rev_arr(array):
+
+    n= len(array)
+
+    tmp = [0]*n
+
+    for i in range(n):
+        tmp[i] = array[n-i-1]
+    
+    for i in range(n):
+        array[i] = tmp[i]
+    
+    for i in range(len(array)):
+        print(array[i])
+    
+rev_arr([1,2,3,4])
+
+
+
+# def rev_arr(array):
+    array.reverse()
+    
+    for i in range(len(array)):
+        print(array[i])
+
+rev_arr([1,2,3,4])
