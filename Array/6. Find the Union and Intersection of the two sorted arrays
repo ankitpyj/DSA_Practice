@@ -1,0 +1,6 @@
+def findUnion(self, a, b):
+    s1 = set(a) 
+    s2 = set(b)
+    union_set = set(a) | set(b)
+        
+    return sorted(union_set)
