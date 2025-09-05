@@ -1,6 +1,8 @@
-def findUnion(self, a, b):
-    s1 = set(a) 
+def findUnionIntersection(a, b):
+    s1 = set(a)
     s2 = set(b)
-    union_set = set(a) | set(b)
-        
-    return sorted(union_set)
+
+    union_set = s1 | s2                  # union
+    intersection_set = s1 & s2           # intersection
+
+    return sorted(union_set), sorted(intersection_set)
