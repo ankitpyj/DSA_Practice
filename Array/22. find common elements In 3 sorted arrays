@@ -1,0 +1,14 @@
+class Solution:
+    def commonElements(self, arr1, arr2, arr3):
+        
+        intersec1 = set(arr1) & set(arr2)
+        intersec2 = intersec1 & set(arr3)
+
+        result = sorted(list(intersec2))
+        
+        if not result:
+            return [-1]
+
+        return result
+    
+ob = Solution()
