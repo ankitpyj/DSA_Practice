@@ -1,0 +1,17 @@
+class Solution:
+    def occurtimes(self, arr, k):
+        n = len(arr)                 # total number of elements
+        times = n // k               # threshold (n/k)
+        result = []                  # to store answer
+
+        for num in set(arr):         # loop through unique elements only
+            if arr.count(num) > times:   # check frequency of each unique element
+                result.append(num)       # if it appears more than n/k times, add it
+
+        return result if result else [-1]  # return result or [-1] if empty
+
+
+ob = Solution()
+arr = [9, 10, 7, 9, 2, 9, 10]
+k = 3
+print(ob.occurtimes(arr,k))
