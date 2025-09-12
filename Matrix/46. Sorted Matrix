@@ -1,0 +1,31 @@
+class Solution:
+    def sortedMatrix(self, N, Mat):
+  
+        flat = []
+        for row in Mat:
+            for val in row:
+                flat.append(val)
+
+        # Step 2: Sort
+        flat.sort()
+
+        # Step 3: Rebuild into N x N
+        result = [flat[i*N:(i+1)*N] for i in range(N)]
+
+        # result = []               # final 2D matrix
+        # for i in range(N):         # run n times (4 times here)
+        #     start = i * N           # starting index of slice
+        #     end = (i + 1) * N       # ending index of slice
+        #     row = flat[start:end]   # take slice of size n
+        #     result.append(row)      # add row to result
+
+
+        # ✅ Step 4: Print row by row (with unpacking *)
+        for row in result:
+            print(*row)
+    
+ob= Solution()
+N=4
+Mat=[[10,20,30,40],[15,25,35,45] ,[27,29,37,48],[32,33,39,50]]
+
+print(ob.sortedMatrix(N,Mat))
