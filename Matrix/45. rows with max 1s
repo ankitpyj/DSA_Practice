@@ -1,0 +1,23 @@
+class Solution:
+    def rowWithMax1s(self, arr):
+
+        right = len(arr[0])
+        bottom = len(arr)
+
+        count_max = []
+
+        for i in range(bottom):
+            count = 0
+            for j in range(right):
+                if arr[i][j] == 1:
+                    count += 1
+            count_max.append(count)
+
+        if max(count_max) == 0:
+            return -1
+        return count_max.index(max(count_max))
+    
+ob = Solution()
+arr = [[0,1,1,1], [0,0,1,1], [1,1,1,1], [0,0,0,0]]
+print(ob.rowWithMax1s(arr))
+                
