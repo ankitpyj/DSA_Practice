@@ -1,0 +1,23 @@
+class Solution:
+    def median(self, mat):
+
+        final_string = []
+        
+
+        for row in mat:
+            for value in row:
+                final_string.append(value)
+            
+        final_string.sort()
+        n = len(final_string)
+
+        if n % 2 == 1: 
+           return final_string[n // 2]
+        else:
+            mid1 = final_string[n // 2 - 1]
+            mid2 = final_string[n // 2]
+            return (mid1 + mid2) / 2
+
+ob= Solution()
+mat = [[1, 3, 5], [2, 6, 9],[3, 6, 9]]
+print(ob.median(mat))
