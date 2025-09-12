@@ -1,0 +1,16 @@
+class Solution:
+    def kthSmallest(self, mat, k):
+        flat = []
+        for row in mat:
+            for value in row:
+                flat.append(value)
+        flat.sort()
+        print(flat)
+        return flat[k-1]
+    
+ob = Solution()
+mat1 = [[16, 28, 60, 64], [22, 41, 63, 91],[27, 50, 87, 93],[36, 78, 87, 94]]
+k1 = 3
+mat = [[10, 20, 30, 40],[15, 25, 35, 45],[24, 29, 37, 48],[32, 33, 39, 50]]
+k = 7
+print(ob.kthSmallest(mat,k))
