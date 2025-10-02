@@ -13,3 +13,18 @@ def subsequences_by_mask(s):
 
 s = "abc"
 print(subsequences_by_mask(s))
+
+
+
+
+
+def subsequences(s, i=0, curr=""):
+    if i == len(s):
+        print(curr)
+        return
+    
+    subsequences(s, i+1, curr + s[i])  # include s[i]
+    subsequences(s, i+1, curr)         # exclude s[i]
+
+s = "geeks"
+subsequences(s)     
