@@ -1,0 +1,8 @@
+class Solution:
+    def areRotations(self, s1, s2):
+        return len(s1) == len(s2) and s2 in (s1 + s1)
+    
+ob = Solution()
+s1 = "aab"
+s2 = "ada"
+print(ob.areRotations(s1,s2))
