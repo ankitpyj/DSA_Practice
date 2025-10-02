@@ -1,0 +1,15 @@
+class Solution:
+    def LongestRepeatingSubsequence(self, s,i):
+        i = 0
+        curr = ''
+        if i == len(s):
+            print(max(curr))
+            return
+    
+        self.LongestRepeatingSubsequence(s, i+1, curr + s[i])  # include s[i]
+        self.LongestRepeatingSubsequence(s, i+1, curr)         # exclude s[i]
+
+s = "your_input_string_here"
+ob = Solution()
+print(ob.LongestRepeatingSubsequence(s, 0))
+
