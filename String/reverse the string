@@ -1,0 +1,23 @@
+# class Solution:
+#     def rev_str(self,str):
+#         str.reverse()
+
+#         for i in range(len(str)):
+#             print(str[i])
+
+# ob = Solution()
+# str = ["h","e","l","l","o"]
+# print(ob.rev_str(str))
+
+class Solution(object):
+    def reverseString(self, s):
+        i, j = 0, len(s) - 1  
+        while i < j:           
+            s[i], s[j] = s[j], s[i]
+            i += 1
+            j -= 1
+        return s 
+
+object = Solution()
+              
+
